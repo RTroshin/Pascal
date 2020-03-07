@@ -2,6 +2,7 @@
 { Вычислить гипотенузу и площадь прямоугольного треугольника (значение катетов
   вводить с клавиатуры) }
 
+program AreaOfTriangle;
 var a, b: integer;
     c, S: real;
     // stop: boolean;
