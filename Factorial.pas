@@ -1,5 +1,6 @@
 ﻿{ Вычисление факториала }
 
+program Factorial;
 var
   n, i, fact: integer;
 Begin
