@@ -8,6 +8,8 @@ var a, b: integer;
     // stop: boolean;
     stop: integer;
 Begin
+  // stop := false;
+  stop := 0;
   repeat
     write('Введите катеты A и B: ');
     readln(a, b);
@@ -17,9 +19,9 @@ Begin
     writeln('Площадь треугольника = ', S);
     writeln;
     writeln('Хотите выйти из программы?');
-    write('Если нет, введите 1. Если да, введите 0: ');
-    read(stop);
+    write('Если нет, введите 0. Если да, введите 1: ');
+    readln(stop);
     writeln;
-  // until stop := false;
-  until stop = 0;
+  // until stop := true;
+  until stop = 1;
 end.
