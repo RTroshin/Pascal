@@ -5,18 +5,18 @@
 program ArithmeticProgression;
 var a, Sum, i, n, d: integer;
 Begin
-  write('Введите a: ');
-  read(a);
-  write('Введите n: '); { Диапазон арифметической прогрессии }
-  read(n);
-  write('Введите d: '); { Шаг арифметической прогрессии }
-  read(d);
+  write('Введите начальное значение: ');
+  readln(a);
+  write('Введите диапазон арифметической прогрессии: ');
+  readln(n);
+  write('Введите шаг арифметической прогрессии: ');
+  readln(d);
   Sum := a;
   for i := 1 to n do
   begin
     Sum := Sum + d;
     write(Sum, ' ');
   end;
-  writeln;
+  readln;
 end.
   
