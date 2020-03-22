@@ -6,17 +6,19 @@ var n, k, i, nfact, kfact, nkfact: integer;
     C: real; 
 Begin
   write('Введите n и k: ');
-  read(n, k);
+  readln(n, k);
   
   if (n = 0) then
   begin
-    writeln(n);
+    write(n);
+    readln;
     exit;
   end;
   
   if (k = 0) then
   begin
-    writeln(k);
+    write(k);
+    readln;
     exit;
   end;
   
@@ -43,4 +45,5 @@ Begin
   writeln('k! = ', kfact);
   writeln('(n - k)! = ', nkfact);
   writeln('C = ', C);
+  readln;
 end.
