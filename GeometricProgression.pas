@@ -5,18 +5,18 @@
 program GeometricProgression;
 var a, Sum, i, n, d: integer;
 Begin
-  write('Введите a: ');
-  read(a);
-  write('Введите n: '); { Диапазон геометрической прогрессии }
-  read(n);
-  write('Введите d: '); { Шаг геометрической прогрессии }
-  read(d);
+  write('Введите начальное значение: ');
+  readln(a);
+  write('Введите диапазон геометрической прогрессии: ');
+  readln(n);
+  write('Введите шаг геометрической прогрессии: ');
+  readln(d);
   Sum := a;
   for i := 1 to n do
   begin
     Sum := Sum * d;
     write(Sum, ' ');
   end;
-  writeln;
+  readln;
 end.
   
