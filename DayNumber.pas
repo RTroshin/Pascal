@@ -7,6 +7,7 @@ var day_Number: char;
     day: string;
     stop: boolean;
 Begin
+  stop := false;
   repeat
     write('Введите цифру от 1 до 7: '); { Вывод строки с подсказкой }
     readln(day_Number); { Считывание данных }
@@ -20,7 +21,8 @@ Begin
       '7': day := 'Воскресенье';
     else
     begin
-      writeln('Вы ввели цифру вне диапазона!');
+      write('Вы ввели цифру вне диапазона!');
+      readln;
       exit;
     end;
     end;
