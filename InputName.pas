@@ -9,5 +9,6 @@ Begin
   readln(a); { Считывание данных }
   write('Введите фамилию: ');
   readln(b);
-  writeln('Фамилия и имя: ' + b + ' ' + a);
+  write('Фамилия и имя: ' + b + ' ' + a);
+  readln;
 end.
