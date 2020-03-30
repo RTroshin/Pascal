@@ -1,14 +1,19 @@
-﻿{ Вычисление факториала }
+﻿{ Задание №1 }
+{ Написать программу для определения факториала }
 
 program Factorial;
-var
-  n, i, fact: integer;
+var fact: longint; { Для вычисления факториала использовать тип longint }
+    i, n: byte; { Тип byte для неотрицательных значений }
+    stop: boolean;
 Begin
-  write('Введите число: ');
-  readln(n);
-  fact := 1;
-  for i := 1 to n do
-    fact := fact * i;
-  write(n, '! = ', fact);
-  readln;
+  stop := false;
+  repeat
+    write('Введите число: ');
+    readln(n);
+    fact := 1;
+    for i := 1 to n do
+      fact := fact * i;
+    writeln(n, '! = ', fact);
+    writeln;
+  until stop = true;
 end.
