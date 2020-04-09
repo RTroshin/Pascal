@@ -16,6 +16,6 @@ Begin
   write('Введите числа x и y: ');
   readln(x, y);
   ArithMean(x, y);
-  writeln('Среднее арифметическое равно ', AM);
+  writeln('Среднее арифметическое чисел x и y равно ', AM);
   readln;
 end.
