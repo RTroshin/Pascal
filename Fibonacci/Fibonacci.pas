@@ -3,8 +3,6 @@
 
 program Fibonacci;
 
-var n: integer; { Глобальная переменная }
-
 function Fibo(i: integer): longint;
 begin
   if i = 1 then
@@ -16,7 +14,7 @@ begin
       Fibo := Fibo(i - 1) + Fibo(i - 2);
 end;
 
-var i: integer;
+var n, i: integer;
 Begin
   write('Введите число n: ');
   readln(n);
