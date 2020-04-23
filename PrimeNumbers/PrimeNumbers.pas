@@ -1,9 +1,13 @@
-﻿{ Задание №2 }
-{ Напишите программу, которая вводит натуральные числа a и b и выводит все
-  простые числа в диапазоне от a до b }
+﻿{ Задание №1 }
+{ Найдите в массиве все простые числа и скопируйте их в новый массив }
 
 program PrimeNumbers;
-var a, b, i, n, count: integer;
+
+{ const N = 10; { Константа для размерности массива }
+
+var { A: array[1..N] of integer; }
+    { B: array[1..N] of integer; }
+    a, b, i, n, count: integer;
     stop: boolean;
 Begin
   stop := false;
