@@ -3,40 +3,53 @@
 
 program PrimeNumbers;
 
-{ const N = 10; { Константа для размерности массива }
+const N = 10; { Константа для размерности массива }
 
-var { A: array[1..N] of integer; }
-    { B: array[1..N] of integer; }
-    a, b, i, n, count: integer;
+var A: array[1..N] of integer;
+    B: array[1..N] of integer;
+    number, i, j, k, count: integer;
     stop: boolean;
 Begin
   stop := false;
+  k := 1;
   while (stop = false) do
   begin
-    write('Введите диапазон a и b: ');
-    readln(a, b);
-    if (b <= 1) then
+    write('Введите значения в массив (целые положительные числа): ');
+    for i := 1 to N do
     begin
-      while (b <= 1) do
+      readln(number);
+      if (number < 0) then
       begin
-        writeln('Число b должно быть больше единицы!! ');
-        write('Введите диапазон a и b: ');
-        readln(a, b);
+        while (number < 1) do
+        begin
+          writeln('Введите целое положительное число!');
+          readln(number);
+        end;
       end;
+        A[i] := number;
     end;
-    writeln('Простые числа: ');
-    for i := a to b do
+    write('Исходный массив: ');
+    for i := 1 to N do
+      write(A[i], ' ');
+    writeln;
+    write('Массив простых чисел: ');
+    for i := 1 to N do
     begin
       count := 0;
-      for n := 1 to i do
+      for j := 1 to i do
       begin
-        if (i mod n = 0) then
-          inc(count);
+      if (A[i] mod j = 0) then
+        inc(count);
       end;
       if (count = 2) then
-        write(i, ' ');
+      begin
+        B[k] := A[i];
+        inc(k);
+      end;
     end;
     stop := true;
   end;
+  for i := 1 to N do
+    write(B[i], ' ');  
   readln;
 end.
