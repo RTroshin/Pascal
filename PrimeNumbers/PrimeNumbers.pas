@@ -12,42 +12,38 @@ var A: array[1..N] of integer;
 Begin
   stop := false;
   k := 1;
-  while (stop = false) do
+  writeln('Введите значения в массив (целые положительные числа):');
+  for i := 1 to N do
   begin
-    write('Введите значения в массив (целые положительные числа): ');
-    for i := 1 to N do
+    readln(number);
+    if (number < 0) then
     begin
-      readln(number);
-      if (number < 0) then
+      while (number < 1) do
       begin
-        while (number < 1) do
-        begin
-          writeln('Введите целое положительное число!');
-          readln(number);
-        end;
-      end;
-        A[i] := number;
-    end;
-    write('Исходный массив: ');
-    for i := 1 to N do
-      write(A[i], ' ');
-    writeln;
-    write('Массив простых чисел: ');
-    for i := 1 to N do
-    begin
-      count := 0;
-      for j := 1 to i do
-      begin
-      if (A[i] mod j = 0) then
-        inc(count);
-      end;
-      if (count = 2) then
-      begin
-        B[k] := A[i];
-        inc(k);
+        writeln('Введите целое положительное число!');
+        readln(number);
       end;
     end;
-    stop := true;
+      A[i] := number;
+  end;
+  write('Исходный массив: ');
+  for i := 1 to N do
+    write(A[i], ' ');
+  writeln;
+  write('Массив простых чисел: ');
+  for i := 1 to N do
+  begin
+    count := 0;
+    for j := 1 to i do
+    begin
+    if (A[i] mod j = 0) then
+      inc(count);
+    end;
+    if (count = 2) then
+    begin
+      B[k] := A[i];
+      inc(k);
+    end;
   end;
   for i := 1 to N do
     write(B[i], ' ');  
