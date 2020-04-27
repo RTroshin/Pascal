@@ -8,9 +8,7 @@ const N = 10; { Константа для размерности массива 
 var A: array[1..N] of integer;
     B: array[1..N] of integer;
     number, i, j, k, count: integer;
-    stop: boolean;
 Begin
-  stop := false;
   k := 1;
   writeln('Введите значения в массив (целые положительные числа):');
   for i := 1 to N do
