@@ -12,8 +12,14 @@ end;
 
 var N: integer;
 Begin
-  write('Введите число N: ');
+  write('Введите целое положительное число N: ');
   readln(N);
-  writeln('Сумма чисел от 1 до N равна ', Sum(N));
+  if N < 0 then
+    while N < 0 do
+    begin
+      writeln('Ошибка! Введите целое положительное число!');
+      readln(N);
+    end;
+  writeln('Сумма чисел от 1 до N: ', Sum(N));
   readln;
 end.
