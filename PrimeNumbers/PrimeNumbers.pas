@@ -7,18 +7,18 @@ const N = 10; { Константа для размерности массива 
 
 var A: array[1..N] of integer;
     B: array[1..N] of integer;
-    number, i, j, k, count: integer;
+    number, i, k, count: integer;
 Begin
   k := 1;
-  writeln('Введите значения в массив (целые положительные числа):');
+  writeln('Введите значения в массив (только натуральные числа):');
   for i := 1 to N do
   begin
     readln(number);
     if (number < 0) then
     begin
-      while (number < 1) do
+      while (number <= 0) do
       begin
-        writeln('Введите целое положительное число!');
+        writeln('Введите натуральное число!');
         readln(number);
       end;
     end;
@@ -31,13 +31,10 @@ Begin
   write('Массив простых чисел: ');
   for i := 1 to N do
   begin
-    count := 0;
-    for j := 1 to i do
-    begin
-    if (A[i] mod j = 0) then
+    count := 2;
+    while (A[i] mod count <> 0) and (count * count <= A[i]) do
       inc(count);
-    end;
-    if (count = 2) then
+    if (count * count > A[i]) and (A[i] > 1) then
     begin
       B[k] := A[i];
       inc(k);
