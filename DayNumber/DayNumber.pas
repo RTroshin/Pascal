@@ -21,9 +21,7 @@ Begin
       '7': day := 'Воскресенье';
     else
     begin
-      write('Вы ввели цифру вне диапазона!');
-      readln;
-      exit;
+      day := ('Вы ввели цифру вне диапазона!');
     end;
     end;
     writeln(day);
