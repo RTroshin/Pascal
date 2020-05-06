@@ -20,6 +20,6 @@ Begin
     writeln(answer);
   end
   else
-    writeln(answer);
+    writeln('Первая цифра в числе: ', answer);
   readln;
 end.
