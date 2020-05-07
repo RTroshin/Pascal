@@ -12,8 +12,7 @@ Begin
   j := N;
   even := 0;
   odd := 0;
-  write('Введите номер искомого элемента в массиве (от 1 до ', N, ' ): ');
-  readln(number);
+  write('Исходный массив: ');
   for i := 1 to N do
   begin
     A[i] := j;
@@ -21,6 +20,8 @@ Begin
     dec(j);
   end;
   writeln;
+  write('Введите номер искомого элемента в массиве (от 1 до ', N, ' ): ');
+  readln(number);
   for i := 1 to N do
   begin
     if number = i then
