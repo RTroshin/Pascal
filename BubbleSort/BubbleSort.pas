@@ -1,8 +1,8 @@
-﻿{ Задание: сортировка массива методом пузырька }
+﻿{ Задание: отсортировать массив методом пузырька }
 
 program BubbleSort;
 
-const N = 5;
+const N = 5; { Константа для размерности массива }
 
 var A: array[1..N] of integer;
     i, j, temp: integer;
@@ -14,8 +14,8 @@ Begin
     A[i] := random(100) + 1;
     write(A[i], ' ');
   end;
-  for i := 1 to N - 1 do { N - 1 ОБЯЗАТЕЛЬНО! }
-    for j := 1 to N - i do { N - i ОБЯЗАТЕЛЬНО! }
+  for i := 1 to N - 1 do
+    for j := 1 to N - i do
       if (A[j] > A[j + 1]) then
       begin
         temp := A[j];
