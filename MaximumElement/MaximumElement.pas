@@ -2,7 +2,7 @@
 
 program MaximumElement;
 
-const N = 5;
+const N = 5; { Константа для размерности массива }
 
 var A: array[1..N] of integer;
     i, max: integer;
