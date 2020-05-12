@@ -8,6 +8,7 @@ var A: array[1..N] of integer;
     i, max: integer;
 Begin
   randomize;
+  write('Исходный массив: ');
   for i := 1 to N do
   begin
     A[i] := random(100) + 1;
