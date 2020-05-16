@@ -3,13 +3,14 @@
 
 program ArrayMultiplication;
 
-const N = 5;
+const N = 5; { Константа для размерности массива }
 
 var A: array[1..N] of integer;
     i, mult: integer ;
 Begin
   randomize;
   mult := 1;
+  write('Исходный массив: ');
   for i := 1 to N do
   begin
     A[i] := random(5) + 1;
