@@ -3,13 +3,14 @@
 
 program ArraySummation;
 
-const N = 5;
+const N = 5; { Константа для размерности массива }
 
 var A: array[1..N] of integer;
     i, sum: integer ;
 Begin
   randomize;
   sum := 0;
+  write('Исходный массив: ');
   for i := 1 to N do
   begin
     A[i] := random(5) + 1;
