@@ -8,7 +8,7 @@ var A: array[1..N] of integer;
     i, j, temp: integer;
 Begin
   randomize;
-  writeln('Неотсортированный массив: ');
+  writeln('Исходный массив: ');
   for i := 1 to N do
   begin
     A[i] := random(100) + 1;
