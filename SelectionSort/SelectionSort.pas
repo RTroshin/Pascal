@@ -4,7 +4,7 @@ program SelectionSort;
 
 const N = 5; { Константа для размерности массива }
 
-var A: array[1..n] of integer;
+var A: array[1..N] of integer;
     i, j, temp: integer;
     imax: byte;
 Begin
@@ -15,10 +15,10 @@ Begin
     A[i] := random(100) + 1;
     write(A[i], ' ');
   end;
-  for i := 1 to n - 1 do
+  for i := 1 to N - 1 do
   begin
     imax := i;
-    for j := i + 1 to n do
+    for j := i + 1 to N do
       if (A[imax] < A[j]) then
         imax := j;
     temp := A[i];
