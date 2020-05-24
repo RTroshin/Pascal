@@ -5,7 +5,8 @@ program BubbleSort;
 const N = 5; { Константа для размерности массива }
 
 var A: array[1..N] of integer;
-    i, j, temp: integer;
+    temp: integer;
+    i, j: byte;
     stop: boolean;
 Begin
   randomize;
