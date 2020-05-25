@@ -5,8 +5,8 @@ program SelectionSort;
 const N = 5; { Константа для размерности массива }
 
 var A: array[1..N] of integer;
-    i, j, temp: integer;
-    imax: byte;
+    temp: integer;
+    i, j, imax: byte;
 Begin
   randomize;
   writeln('Исходный массив: ');
