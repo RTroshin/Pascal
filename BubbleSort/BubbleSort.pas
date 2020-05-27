@@ -10,7 +10,7 @@ var A: array[1..N] of integer;
     stop: boolean;
 Begin
   randomize;
-  writeln('Исходный массив: ');
+  writeln('Исходный массив:');
   for i := 1 to N do
   begin
     A[i] := random(100) + 1;
@@ -30,7 +30,7 @@ Begin
   until stop = true;
   writeln;
   writeln;
-  writeln('Отсортированный массив по возрастанию: ');
+  writeln('Отсортированный массив по возрастанию:');
   for i := 1 to N do
     write(A[i], ' ');
   readln;
