@@ -21,6 +21,7 @@ Begin
     end;
     writeln;
   end;
+  writeln;
   k := random(0, 1);
   b := 10;
 
@@ -42,16 +43,15 @@ Begin
     k := k + 10;
   end;
 
-  { Вывод массива ИЗМЕНИТЬ}
+  { Вывод массива }
 
   for i := 1 to N do
+  begin
     for j := 1 to N do
-    begin
-      if (j < N) then
-        write(a[i, j], ' ')
-      else
-        writeln(a[i, j], ' ');
-    end;
+      write(a[i, j], ' ');
+    writeln;
+  end;
+  writeln;
 
   { Проверка завершенности игры }
 
@@ -71,7 +71,7 @@ Begin
       a[r, o] := 1;
       b := b + 1;
 
-      { Вывод массива ИЗМЕНИТЬ}
+      { Вывод массива ИЗМЕНИТЬ }
 
       for i := 1 to N do
         for j := 1 to N do
@@ -92,7 +92,7 @@ Begin
       a[r, o] := 2;
       k := k + 1;
 
-    { Вывод массива ИЗМЕНИТЬ}
+    { Вывод массива ИЗМЕНИТЬ }
 
     for i := 1 to N do
       for j := 1 to N do
