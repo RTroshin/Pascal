@@ -91,16 +91,15 @@ Begin
       a[r, o] := 2;
       k := k + 1;
 
-      { Вывод массива ИЗМЕНИТЬ }
+      { Вывод массива }
 
       for i := 1 to N do
+      begin
         for j := 1 to N do
-        begin
-          if (j < N) then
-            write(a[i, j], ' ')
-          else
-            writeln(a[i, j], ' ');
-        end;
+          write(a[i, j], ' ');
+        writeln;
+      end;
+      writeln;
     end;
   end;
   writeln('Игра окончена');
