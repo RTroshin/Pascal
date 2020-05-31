@@ -16,8 +16,8 @@ Begin
   begin
     for j := 1 to N do
     begin
-      a[i, j] := 0;
-      write(a[i, j], ' ');
+      A[i, j] := 0;
+      write(A[i, j], ' ');
     end;
     writeln;
   end;
@@ -32,14 +32,14 @@ Begin
     writeln('Первый ход компьютера (1)');
     r := random(1, N);
     o := random(1, N);
-    a[r, o] := 1;
+    A[r, o] := 1;
     k := k + 10;
   end;
   if (k = 1) then
   begin
     writeln('Первый ход ваш (2), введите строку столбик через пробел');
     readln(r, o);
-    a[r, o] := 2;
+    A[r, o] := 2;
     k := k + 10;
   end;
 
@@ -48,7 +48,7 @@ Begin
   for i := 1 to N do
   begin
     for j := 1 to N do
-      write(a[i, j], ' ');
+      write(A[i, j], ' ');
     writeln;
   end;
   writeln;
@@ -67,8 +67,8 @@ Begin
       repeat
         r := random(1, N);
         o := random(1, N);
-      until (a[r, o] = 0);
-      a[r, o] := 1;
+      until (A[r, o] = 0);
+      A[r, o] := 1;
       b := b + 1;
 
       { Вывод массива }
@@ -76,7 +76,7 @@ Begin
       for i := 1 to N do
       begin
         for j := 1 to N do
-          write(a[i, j], ' ');
+          write(A[i, j], ' ');
         writeln;
       end;
       writeln;
@@ -88,7 +88,7 @@ Begin
     begin
       writeln('Ваш ход (2), введите строку столбик пустой клетки через пробел');
       readln(r, o);
-      a[r, o] := 2;
+      A[r, o] := 2;
       k := k + 1;
 
       { Вывод массива }
@@ -96,7 +96,7 @@ Begin
       for i := 1 to N do
       begin
         for j := 1 to N do
-          write(a[i, j], ' ');
+          write(A[i, j], ' ');
         writeln;
       end;
       writeln;
