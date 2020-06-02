@@ -6,7 +6,7 @@ program TicTacToe;
 const N = 3; { Константа для размерности массива }
 
 var A: array [1..N, 1..N] of integer;
-    i, j, k, b, r, o, s, l: byte;
+    i, j, k, b, r, o, s: byte;
 Begin
   writeln('Правила игры - "Крестики-Нолики": поле 3х3, пользователь играет 2(это - x), компьютер играет 1(это - o)');
 
@@ -61,7 +61,7 @@ Begin
 
     { Ход компьютера, генерация клетки }
 
-    if (b < k) and (l <> 20) then
+    if (b < k) then
     begin
       writeln('Ход компьютера (1)');
       repeat
@@ -84,7 +84,7 @@ Begin
 
     { Ход пользователя }
 
-    if (k = b) and (l <> 20) then
+    if (k = b) then
     begin
       writeln('Ваш ход (2), введите строку столбик пустой клетки через пробел');
       readln(r, o);
