@@ -5,19 +5,21 @@ program TicTacToe;
 
 const N = 3; { Константа для размерности массива }
 
-var A: array [1..N, 1..N] of integer;
+var A: array [1..N, 1..N] of char;
     i, j, k, b, r, o, s: byte;
 Begin
-  writeln('Правила игры - "Крестики-Нолики": поле 3х3, пользователь играет 2(это - x), компьютер играет 1(это - o)');
-
+  writeln('Правила игры "Крестики-нолики":');
+  writeln('Игровое поле 3x3, пользователь играет за крестики (X), компьютер играет за нолики (O)');
+  writeln;
+  
   { Вывод игрового поля }
 
   for i := 1 to N do
   begin
     for j := 1 to N do
     begin
-      A[i, j] := 0;
-      write(A[i, j], ' ');
+      a[i, j] := '#';
+      write(a[i, j], ' ');
     end;
     writeln;
   end;
@@ -29,26 +31,28 @@ Begin
 
   if (k = 0) then
   begin
-    writeln('Первый ход компьютера (1)');
+    writeln('Первый ход компьютера (O)');
     r := random(1, N);
     o := random(1, N);
-    A[r, o] := 1;
+    a[r, o] := 'O';
     k := k + 10;
+    writeln    
   end;
   if (k = 1) then
   begin
-    writeln('Первый ход ваш (2), введите строку столбик через пробел');
+    write('Первый ход ваш (X), введите номер строки и столбца через пробел: ');
     readln(r, o);
-    A[r, o] := 2;
+    a[r, o] := 'X';
     k := k + 10;
+    writeln;    
   end;
-
+  
   { Вывод массива }
 
   for i := 1 to N do
   begin
     for j := 1 to N do
-      write(A[i, j], ' ');
+      write(a[i, j], ' ');
     writeln;
   end;
   writeln;
@@ -63,12 +67,13 @@ Begin
 
     if (b < k) then
     begin
-      writeln('Ход компьютера (1)');
+      writeln('Ход компьютера (O)');
+      writeln;
       repeat
         r := random(1, N);
         o := random(1, N);
-      until (A[r, o] = 0);
-      A[r, o] := 1;
+      until (a[r, o] = '#');
+      a[r, o] := 'O';
       b := b + 1;
 
       { Вывод массива }
@@ -76,7 +81,7 @@ Begin
       for i := 1 to N do
       begin
         for j := 1 to N do
-          write(A[i, j], ' ');
+          write(a[i, j], ' ');
         writeln;
       end;
       writeln;
@@ -86,9 +91,10 @@ Begin
 
     if (k = b) then
     begin
-      writeln('Ваш ход (2), введите строку столбик пустой клетки через пробел');
+      write('Ваш ход (X), введите строку столбик пустой клетки через пробел: ');
       readln(r, o);
-      A[r, o] := 2;
+      writeln;
+      a[r, o] := 'X';
       k := k + 1;
 
       { Вывод массива }
@@ -96,7 +102,7 @@ Begin
       for i := 1 to N do
       begin
         for j := 1 to N do
-          write(A[i, j], ' ');
+          write(a[i, j], ' ');
         writeln;
       end;
       writeln;
