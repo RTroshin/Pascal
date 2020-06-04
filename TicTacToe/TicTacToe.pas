@@ -84,16 +84,7 @@ Begin
       until (A[r, o] = '#');
       A[r, o] := 'O';
       b := b + 1;
-
-      { Вывод массива }
-
-      for i := 1 to N do
-      begin
-        for j := 1 to N do
-          write(A[i, j], ' ');
-        writeln;
-      end;
-      writeln;
+      ArrayOutput(A, i, j);
     end;
 
     { Ход пользователя }
