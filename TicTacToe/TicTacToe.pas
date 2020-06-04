@@ -6,7 +6,20 @@ program TicTacToe;
 
 const N = 3; { Константа для размерности массива }
 
-var A: array [1..N, 1..N] of char;
+type arrayOfChar = array [1..N, 1..N] of char; 
+
+procedure ArrayOutput(A: arrayOfChar; i, j: byte);
+begin
+  for i := 1 to N do
+  begin
+    for j := 1 to N do
+      write(A[i, j], ' ');
+    writeln;
+  end;
+  writeln;  
+end;
+
+var A: arrayOfChar;
     i, j, k, b, r, o, s: byte;
 Begin
   writeln('Правила игры "Крестики-нолики":');
@@ -51,13 +64,14 @@ Begin
   
   { Вывод массива }
 
-  for i := 1 to N do
+{  for i := 1 to N do
   begin
     for j := 1 to N do
       write(A[i, j], ' ');
     writeln;
   end;
-  writeln;
+  writeln; }
+  ArrayOutput(A, i, j);
 
   { Проверка завершенности игры }
 
