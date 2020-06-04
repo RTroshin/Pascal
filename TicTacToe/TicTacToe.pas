@@ -8,7 +8,9 @@ const N = 3; { Константа для размерности массива }
 
 type arrayOfChar = array [1..N, 1..N] of char; 
 
-procedure ArrayOutput(A: arrayOfChar; i, j: byte);
+{ Процедура для вывода массива }
+
+procedure arrayOutput(A: arrayOfChar; i, j: byte);
 begin
   for i := 1 to N do
   begin
@@ -61,16 +63,7 @@ Begin
     k := k + 10;
     writeln;    
   end;
-  
-  { Вывод массива }
 
-{  for i := 1 to N do
-  begin
-    for j := 1 to N do
-      write(A[i, j], ' ');
-    writeln;
-  end;
-  writeln; }
   ArrayOutput(A, i, j);
 
   { Проверка завершенности игры }
