@@ -63,7 +63,6 @@ Begin
     k := k + 10;
     writeln;    
   end;
-
   ArrayOutput(A, i, j);
 
   { Проверка завершенности игры }
@@ -96,16 +95,7 @@ Begin
       writeln;
       A[r, o] := 'X';
       k := k + 1;
-
-      { Вывод массива }
-
-      for i := 1 to N do
-      begin
-        for j := 1 to N do
-          write(A[i, j], ' ');
-        writeln;
-      end;
-      writeln;
+      ArrayOutput(A, i, j);
     end;
   end;
   writeln('Игра окончена');
