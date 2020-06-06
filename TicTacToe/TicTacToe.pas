@@ -22,7 +22,7 @@ begin
 end;
 
 var A: arrayOfChar;
-    i, j, k, b, r, o, s: byte;
+    i, j, k, r, o, s: byte;
 Begin
   writeln('Правила игры "Крестики-нолики":');
   writeln('Игровое поле 3x3, пользователь играет за крестики (X), компьютер');
@@ -42,7 +42,6 @@ Begin
   end;
   writeln;
   k := random(0, 1);
-  //b := 10;
 
   { Первый ход }
 
@@ -52,7 +51,6 @@ Begin
     r := random(1, N);
     o := random(1, N);
     A[r, o] := 'O';
-    //k := k + 10;
     writeln    
   end;
   if (k = 1) then
@@ -60,14 +58,12 @@ Begin
     write('Первый ход ваш (X), введите номер строки и столбца через пробел: ');
     readln(r, o);
     A[r, o] := 'X';
-    //k := k + 10;
     writeln;    
   end;
   arrayOutput(A, i, j);
 
   { Проверка завершенности игры }
 
-  //for s := 1 to 3 do
   s := 1;
   while s < 4 do
   begin
@@ -75,7 +71,6 @@ Begin
 
     { Ход компьютера, генерация клетки }
 
-    //if (b < k) then
     if (k = 1) then 
     begin
       writeln('Ход компьютера (O)');
@@ -85,21 +80,18 @@ Begin
         o := random(1, N);
       until (A[r, o] = '#');
       A[r, o] := 'O';
-      //b := b + 1;
       dec(k);
       arrayOutput(A, i, j);
     end;
 
     { Ход пользователя }
 
-    //if (k = b) then
     if (k = 0) then
     begin
       write('Ваш ход (X), введите строку столбик пустой клетки через пробел: ');
       readln(r, o);
       writeln;
       A[r, o] := 'X';
-      //k := k + 1;
       inc(k);
       arrayOutput(A, i, j);
     end;
