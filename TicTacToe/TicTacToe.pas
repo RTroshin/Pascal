@@ -63,7 +63,7 @@ Begin
     k := k + 10;
     writeln;    
   end;
-  ArrayOutput(A, i, j);
+  arrayOutput(A, i, j);
 
   { Проверка завершенности игры }
 
@@ -83,7 +83,7 @@ Begin
       until (A[r, o] = '#');
       A[r, o] := 'O';
       b := b + 1;
-      ArrayOutput(A, i, j);
+      arrayOutput(A, i, j);
     end;
 
     { Ход пользователя }
@@ -95,7 +95,7 @@ Begin
       writeln;
       A[r, o] := 'X';
       k := k + 1;
-      ArrayOutput(A, i, j);
+      arrayOutput(A, i, j);
     end;
   end;
   writeln('Игра окончена');
