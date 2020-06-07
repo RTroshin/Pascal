@@ -90,8 +90,8 @@ Begin
     begin
       write('Ваш ход (X), введите строку столбик пустой клетки через пробел: ');
       readln(r, o);
-      writeln;
       A[r, o] := 'X';
+      writeln;
       inc(k);
       arrayOutput(A, i, j);
     end;
