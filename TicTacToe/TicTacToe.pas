@@ -65,8 +65,7 @@ Begin
   { Проверка завершенности игры }
 
   s := 1;
-  while s < 4 do
-  begin
+  repeat
     writeln('ХОД', ' ', s + 1);
 
     { Ход компьютера, генерация клетки }
@@ -96,7 +95,7 @@ Begin
       arrayOutput(A, i, j);
     end;
     inc(s);
-  end;
+  until (s > 3);
   writeln('Игра окончена');
   readln;
 end.
