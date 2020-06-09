@@ -2,6 +2,7 @@
 { Составить программу со вспомогательным алгоритмом - функция }
 
 program FactorialFunction;
+
 var n: integer;
 function factorial(n: integer): longint;
 begin
@@ -10,6 +11,7 @@ begin
   else
     factorial := n * factorial(n - 1)
 end;
+
 Begin
   while true do
   begin
