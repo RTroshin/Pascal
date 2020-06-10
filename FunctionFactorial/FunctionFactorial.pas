@@ -3,7 +3,6 @@
 
 program FactorialFunction;
 
-var n: integer;
 function factorial(n: integer): longint;
 begin
   if n = 0 then
@@ -12,6 +11,7 @@ begin
     factorial := n * factorial(n - 1)
 end;
 
+var n: integer;
 Begin
   while true do
   begin
