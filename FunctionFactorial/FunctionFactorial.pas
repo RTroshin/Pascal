@@ -17,10 +17,10 @@ Begin
   begin
     write('Введите число n: ');
     readln(n);
-    if n < 0 then
-      writeln('Факториала не существует!')
+    if n > 0 then
+      writeln(n, '! = ', factorial(n))
     else
-      writeln(n, '! = ', factorial(n));
+      writeln('Факториала не существует!');
     writeln;
   end;
 end.
