@@ -6,7 +6,7 @@ program ArithmeticMean;
 
 var AM: real; { Глобальная переменная }
 
-procedure ArithMean(a, b: integer);
+procedure arithMean(a, b: integer);
 begin
   AM := (a + b) / 2;
 end;
@@ -15,7 +15,7 @@ var x, y: integer;
 Begin
   write('Введите числа x и y: ');
   readln(x, y);
-  ArithMean(x, y);
+  arithMean(x, y);
   writeln('Среднее арифметическое чисел x и y равно ', AM);
   readln;
 end.
