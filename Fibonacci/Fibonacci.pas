@@ -3,15 +3,15 @@
 
 program Fibonacci;
 
-function Fibo(i: integer): longint;
+function fibo(i: integer): longint;
 begin
   if i = 1 then
-    Fibo := 1
+    fibo := 1
   else
     if i = 2 then
-      Fibo := 1
+      fibo := 1
     else
-      Fibo := Fibo(i - 1) + Fibo(i - 2);
+      fibo := fibo(i - 1) + fibo(i - 2);
 end;
 
 var n, i: integer;
@@ -20,7 +20,7 @@ Begin
   readln(n);
   i := 1;
   repeat
-    write(Fibo(i), ' ');
+    write(fibo(i), ' ');
     inc(i);
     dec(n);
   until n < 0;
