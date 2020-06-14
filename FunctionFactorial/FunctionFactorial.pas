@@ -13,8 +13,6 @@ end;
 
 var n: integer;
 Begin
-  //while true do
-  //begin
   repeat
     write('Введите число n: ');
     readln(n);
@@ -23,6 +21,5 @@ Begin
     else
       writeln('Факториала не существует!');
     writeln;
-  //end;
   until false;
 end.
