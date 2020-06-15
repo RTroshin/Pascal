@@ -3,21 +3,21 @@
 
 program FactorialFunction;
 
-function factorial(n: integer): longint;
+function factorial(N: integer): longint;
 begin
-  if n = 0 then
+  if N = 0 then
     factorial := 1
   else
-    factorial := n * factorial(n - 1)
+    factorial := N * factorial(N - 1)
 end;
 
-var n: integer;
+var N: integer;
 Begin
   repeat
-    write('Введите число n: ');
-    readln(n);
-    if n > 0 then
-      writeln(n, '! = ', factorial(n))
+    write('Введите число N: ');
+    readln(N);
+    if N > 0 then
+      writeln(N, '! = ', factorial(N))
     else
       writeln('Факториала не существует!');
     writeln;
