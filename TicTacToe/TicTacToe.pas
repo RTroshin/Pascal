@@ -6,9 +6,15 @@ program TicTacToe;
 
 const N = 3; { Константа для размерности массива }
 
-type arrayOfChar = array [1..N, 1..N] of char; 
+type arrayOfChar = array [1..N, 1..N] of char;
 
 { Процедура для вывода массива }
+
+procedure userTurn(var A: arrayOfChar; r, o: byte);
+begin
+  readln(r, o);
+  A[r, o] := 'X';
+end;
 
 procedure arrayOutput(A: arrayOfChar; i, j: byte);
 begin
@@ -18,7 +24,7 @@ begin
       write(A[i, j], ' ');
     writeln;
   end;
-  writeln;  
+  writeln;
 end;
 
 var A: arrayOfChar;
@@ -51,14 +57,15 @@ Begin
     r := random(1, N);
     o := random(1, N);
     A[r, o] := 'O';
-    writeln    
+    writeln
   end;
   if (k = 1) then
   begin
     write('Первый ход ваш (X), введите номер строки и столбца через пробел: ');
-    readln(r, o);
-    A[r, o] := 'X';
-    writeln;    
+    //readln(r, o);
+    //A[r, o] := 'X';
+    userTurn(A, r, o);
+    writeln;
   end;
   arrayOutput(A, i, j);
 
