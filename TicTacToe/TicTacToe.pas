@@ -62,8 +62,6 @@ Begin
   if (k = 1) then
   begin
     write('Первый ход ваш (X), введите номер строки и столбца через пробел: ');
-    //readln(r, o);
-    //A[r, o] := 'X';
     userTurn(A, r, o);
     writeln;
   end;
