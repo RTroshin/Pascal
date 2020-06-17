@@ -16,6 +16,12 @@ begin
   A[r, o] := 'X';
 end;
 
+procedure computerTurn(var r, o: byte);
+begin
+  r := random(1, N);
+  o := random(1, N);
+end;
+
 procedure arrayOutput(A: arrayOfChar; i, j: byte);
 begin
   for i := 1 to N do
@@ -54,8 +60,9 @@ Begin
   if (k = 0) then
   begin
     writeln('Первый ход компьютера (O)');
-    r := random(1, N);
-    o := random(1, N);
+    //r := random(1, N);
+    //o := random(1, N);
+    computerTurn(r, o);
     A[r, o] := 'O';
     writeln
   end;
