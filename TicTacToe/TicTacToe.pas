@@ -8,8 +8,6 @@ const N = 3; { Константа для размерности массива }
 
 type arrayOfChar = array [1..N, 1..N] of char;
 
-{ Процедура для вывода массива }
-
 procedure userTurn(var A: arrayOfChar; r, o: byte);
 begin
   readln(r, o);
@@ -21,6 +19,8 @@ begin
   r := random(1, N);
   o := random(1, N);
 end;
+
+{ Процедура для вывода массива }
 
 procedure arrayOutput(A: arrayOfChar; i, j: byte);
 begin
