@@ -98,8 +98,9 @@ Begin
     if (k = 0) then
     begin
       write('Ваш ход (X), введите строку столбик пустой клетки через пробел: ');
-      readln(r, o);
-      A[r, o] := 'X';
+      //readln(r, o);
+      //A[r, o] := 'X';
+      userTurn(A, r, o);
       writeln;
       inc(k);
       arrayOutput(A, i, j);
