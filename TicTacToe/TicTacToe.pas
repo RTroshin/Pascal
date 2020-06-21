@@ -49,11 +49,12 @@ Begin
     for j := 1 to N do
     begin
       A[i, j] := '#';
-      write(A[i, j], ' ');
+      //write(A[i, j], ' ');
     end;
-    writeln;
+    //writeln;
   end;
-  writeln;
+  //writeln;
+  arrayOutput(A, i, j);
   k := random(0, 1);
 
   { Первый ход }
