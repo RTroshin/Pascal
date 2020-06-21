@@ -46,10 +46,10 @@ Begin
   for i := 1 to N do
   begin
     for j := 1 to N do
-    begin
+    //begin
       A[i, j] := '#';
       //write(A[i, j], ' ');
-    end;
+    //end;
     //writeln;
   end;
   //writeln;
