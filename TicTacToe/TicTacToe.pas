@@ -20,7 +20,7 @@ begin
   o := random(1, N);
 end;
 
-{ Процедура для вывода массива }
+{ Процедура вывода массива }
 
 procedure arrayOutput(A: arrayOfChar; i, j: byte);
 begin
@@ -42,7 +42,8 @@ Begin
   writeln;
   
   { Вывод игрового поля }
-
+  { Заполнение игрового поля }
+  
   for i := 1 to N do
   begin
     for j := 1 to N do
