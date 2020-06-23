@@ -44,10 +44,8 @@ Begin
   { Заполнение игрового поля }
   
   for i := 1 to N do
-  //begin
     for j := 1 to N do
       A[i, j] := '#';
-  //end;
   arrayOutput(A, i, j);
   k := random(0, 1);
 
