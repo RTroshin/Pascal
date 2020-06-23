@@ -46,9 +46,7 @@ Begin
   for i := 1 to N do
   //begin
     for j := 1 to N do
-    //begin
       A[i, j] := '#';
-    //end;
   //end;
   arrayOutput(A, i, j);
   k := random(0, 1);
