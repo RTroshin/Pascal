@@ -14,10 +14,11 @@ begin
   A[r, o] := 'X';
 end;
 
-procedure computerTurn(var r, o: byte);
+procedure computerTurn(var A: arrayOfChar; r, o: byte);
 begin
   r := random(1, N);
   o := random(1, N);
+  A[r, o] := 'O';
 end;
 
 { Процедура вывода массива }
@@ -54,8 +55,8 @@ Begin
   if (k = 0) then
   begin
     writeln('Первый ход компьютера (O)');
-    computerTurn(r, o);
-    A[r, o] := 'O';
+    computerTurn(A, r, o);
+    //A[r, o] := 'O';
     writeln
   end;
   if (k = 1) then
