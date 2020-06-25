@@ -56,7 +56,6 @@ Begin
   begin
     writeln('Первый ход компьютера (O)');
     computerTurn(A, r, o);
-    //A[r, o] := 'O';
     writeln
   end;
   if (k = 1) then
