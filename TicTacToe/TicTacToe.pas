@@ -96,7 +96,6 @@ Begin
         o := random(1, N);
       until (A[r, o] = '#');
       A[r, o] := 'O';
-      //dec(k);
       arrayOutput(A, i, j);
       dec(k);
     end;
