@@ -100,7 +100,7 @@ Begin
       arrayOutput(A, i, j);
       dec(k);
     end;
-    
+
     { Ход пользователя }
 
     if (k = 0) then
@@ -108,7 +108,6 @@ Begin
       write('Ваш ход (X), введите номер строки и столбца пустой клетки через пробел: ');
       userTurn(A, r, o);
       writeln;
-      //inc(k);
       arrayOutput(A, i, j);
       inc(k);
     end;
