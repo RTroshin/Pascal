@@ -68,7 +68,6 @@ Begin
     writeln('Первый ход компьютера (O)');
     computerTurn(A, r, o);
     writeln
-  //end;
   end
   else
   begin
