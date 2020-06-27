@@ -69,7 +69,6 @@ Begin
     computerTurn(A, r, o);
     writeln
   //end;
-  //if (k = 1) then
   end
   else
   begin
