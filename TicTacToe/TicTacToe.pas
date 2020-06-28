@@ -11,13 +11,17 @@ type arrayOfChar = array [1..N, 1..N] of char;
 procedure userTurn(var A: arrayOfChar; r, o: byte);
 begin
   readln(r, o);
-  while (A[r, o] = 'X') or (A[r, o] = 'O') do
+  //while (A[r, o] = 'X') or (A[r, o] = 'O') do
+  while (A[r, o] <> '#') do
+  //repeat
   begin
     writeln;
     writeln('Клетка занята! Попробуйте ещё раз');
     write('Введите номер строки и столбца через пробел: ');
     readln(r, o);
   end;
+  //until (A[r, o] <> 'X') and (A[r, o] <> 'O');
+  //until (A[r, o] = '#');
   A[r, o] := 'X';
 end;
 
