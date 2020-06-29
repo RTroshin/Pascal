@@ -11,7 +11,6 @@ type arrayOfChar = array [1..N, 1..N] of char;
 procedure userTurn(var A: arrayOfChar; r, o: byte);
 begin
   readln(r, o);
-  //while (A[r, o] <> '#') do
   repeat
   //begin
     writeln;
