@@ -23,8 +23,6 @@ end;
 
 procedure computerTurn(var A: arrayOfChar; r, o: byte);
 begin
-  //r := random(1, N);
-  //o := random(1, N);
   repeat
     r := random(1, N);
     o := random(1, N);
@@ -94,7 +92,6 @@ Begin
         //o := random(1, N);
       //until (A[r, o] = '#');
       computerTurn(A, r, o);
-      //A[r, o] := 'O';
       arrayOutput(A, i, j);
       dec(k);
     end;
