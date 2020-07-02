@@ -87,10 +87,6 @@ Begin
     begin
       writeln('Ход компьютера (O)');
       writeln;
-      //repeat
-        //r := random(1, N);
-        //o := random(1, N);
-      //until (A[r, o] = '#');
       computerTurn(A, r, o);
       arrayOutput(A, i, j);
       dec(k);
