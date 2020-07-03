@@ -61,7 +61,7 @@ Begin
 
   { Первый ход }
 
-  if (k = 1) then
+  if (k = 0) then
   begin
     write('Первый ход ваш (X), введите номер строки и столбца через пробел: ');
     userTurn(A, r, o);
@@ -83,24 +83,24 @@ Begin
 
     { Ход пользователя }
 
-    if (k = 0) then
+    if (k = 1) then
     begin
       write('Ваш ход (X), введите номер строки и столбца пустой клетки через пробел: ');
       userTurn(A, r, o);
       writeln;
       arrayOutput(A, i, j);
-      inc(k);
+      dec(k);
     end;
 
     { Ход компьютера, генерация клетки }
 
-    if (k = 1) then 
+    if (k = 0) then 
     begin
       writeln('Ход компьютера (O)');
       writeln;
       computerTurn(A, r, o);
       arrayOutput(A, i, j);
-      dec(k);
+      inc(k);
     end;
     inc(s);
   until (s > 3);
