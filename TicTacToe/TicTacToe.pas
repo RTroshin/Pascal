@@ -115,11 +115,10 @@ Begin
 
     if (k = 1) then
     begin
-      write('Ваш ход (X), введите номер строки и столбца пустой клетки через пробел: ');
+      write('Ваш ход, введите номер строки и столбца пустой клетки через пробел: ');
       userTurn(A, r, o);
-      //write('Ваш ход, введите номер строки и столбца пустой клетки через пробел: ');
-      //userTurn(A, userChoice, r, o);
       writeln;
+      //userTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
       dec(k);
     end;
@@ -130,9 +129,9 @@ Begin
     begin
       writeln('Ход компьютера (O)');
       writeln;
-      computerTurn(A, r, o);
       //writeln('Ход компьютера');
       //writeln;
+      computerTurn(A, r, o);
       //computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
       inc(k);
