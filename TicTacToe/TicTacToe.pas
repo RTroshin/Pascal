@@ -9,6 +9,7 @@ const N = 3; { Константа для размерности массива }
 type arrayOfChar = array [1..N, 1..N] of char;
 
 procedure userTurn(var A: arrayOfChar; r, o: byte);
+//procedure userTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
 begin
   readln(r, o);
   while (A[r, o] <> '#') do
@@ -18,15 +19,26 @@ begin
     write('Введите номер строки и столбца через пробел: ');
     readln(r, o);
   end;
+  //if (userChoice = 'X') then
+  ////if (k = 0) then
+    //A[r, o] := 'X'
+  //else
+    //A[r, o] := 'O';
   A[r, o] := 'X';
 end;
 
 procedure computerTurn(var A: arrayOfChar; r, o: byte);
+//procedure computerTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
 begin
   repeat
     r := random(1, N);
     o := random(1, N);
   until (A[r, o] = '#');
+  //if (userChoice = 'X') then
+  ////if (k = 0) then
+    //A[r, o] := 'O'
+  //else
+    //A[r, o] := 'X';
   A[r, o] := 'O';
 end;
 
@@ -44,12 +56,27 @@ begin
 end;
 
 var A: arrayOfChar;
-    i, j, k, r, o, s: byte;
+    i, j, k, r, o, s: byte; // Вместо k поставить uC
+    //userChoice: char;
 Begin
   writeln('Правила игры "Крестики-нолики":');
   writeln('Игровое поле 3x3, пользователь играет за крестики (X), компьютер');
   writeln('играет за нолики (O)');
+  writeln('Игроки по очереди ставят на свободные клетки поля 3x3 знаки (один всегда крестики, другой всегда нолики)');
+  writeln('Первый, выстроивший в ряд 3 своих фигуры по вертикали, горизонтали или диагонали, выигрывает');
+  //writeln('Первый ход делает игрок, ставящий крестики');
+  //write('За кого будете играть? Введите X или O: ');
+  //readln(userChoice);  
   writeln;
+  //if (userChoice <> 'X') or (userChoice <> 'O') then
+  //repeat
+    //write('Введите X или O: ');
+    //readln(userChoice);
+  //until ;
+  //if (userChoice = 'X') then
+    //k := 0
+  //else
+    //k := 1;
   
   { Заполнение игрового поля }
   
@@ -57,20 +84,23 @@ Begin
     for j := 1 to N do
       A[i, j] := '#';
   arrayOutput(A, i, j);
-  k := random(0, 1);
+  k := random(0, 1); // DELETE
 
   { Первый ход }
 
   if (k = 0) then
+  //if (userChoice = 'X') then
   begin
-    write('Первый ход ваш (X), введите номер строки и столбца через пробел: ');
+    write('Первый ход ваш, введите номер строки и столбца через пробел: ');
     userTurn(A, r, o);
+    //userTurn(A, userChoice, r, o);
     writeln;
   end
   else
   begin
-    writeln('Первый ход компьютера (O)');
+    writeln('Первый ход компьютера');
     computerTurn(A, r, o);
+    //computerTurn(A, userChoice, r, o);
     writeln
   end;
   arrayOutput(A, i, j);
@@ -87,6 +117,8 @@ Begin
     begin
       write('Ваш ход (X), введите номер строки и столбца пустой клетки через пробел: ');
       userTurn(A, r, o);
+      //write('Ваш ход, введите номер строки и столбца пустой клетки через пробел: ');
+      //userTurn(A, userChoice, r, o);
       writeln;
       arrayOutput(A, i, j);
       dec(k);
@@ -99,6 +131,9 @@ Begin
       writeln('Ход компьютера (O)');
       writeln;
       computerTurn(A, r, o);
+      //writeln('Ход компьютера');
+      //writeln;
+      //computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
       inc(k);
     end;
