@@ -127,8 +127,6 @@ Begin
 
     if (k = 0) then 
     begin
-      //writeln('Ход компьютера (O)');
-      //writeln;
       writeln('Ход компьютера');
       writeln;
       computerTurn(A, r, o);
