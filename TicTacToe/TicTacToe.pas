@@ -8,8 +8,8 @@ const N = 3; { Константа для размерности массива }
 
 type arrayOfChar = array [1..N, 1..N] of char;
 
-procedure userTurn(var A: arrayOfChar; r, o: byte);
-//procedure userTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
+//procedure userTurn(var A: arrayOfChar; r, o: byte);
+procedure userTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
 begin
   readln(r, o);
   while (A[r, o] <> '#') do
@@ -27,8 +27,8 @@ begin
   A[r, o] := 'X';
 end;
 
-procedure computerTurn(var A: arrayOfChar; r, o: byte);
-//procedure computerTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
+//procedure computerTurn(var A: arrayOfChar; r, o: byte);
+procedure computerTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
 begin
   repeat
     r := random(1, N);
@@ -57,7 +57,7 @@ end;
 
 var A: arrayOfChar;
     i, j, k, r, o, s: byte; // Вместо k поставить uC
-    //userChoice: char;
+    userChoice: char;
 Begin
   writeln('Правила игры "Крестики-нолики":');
   writeln('Игроки по очереди ставят на свободные клетки поля 3x3 знаки (один всегда крестики, другой всегда нолики)');
@@ -90,15 +90,15 @@ Begin
   //if (userChoice = 'X') then
   begin
     write('Первый ход ваш, введите номер строки и столбца через пробел: ');
-    userTurn(A, r, o);
-    //userTurn(A, userChoice, r, o);
+    //userTurn(A, r, o);
+    userTurn(A, userChoice, r, o);
     writeln;
   end
   else
   begin
     writeln('Первый ход компьютера');
-    computerTurn(A, r, o);
-    //computerTurn(A, userChoice, r, o);
+    //computerTurn(A, r, o);
+    computerTurn(A, userChoice, r, o);
     writeln
   end;
   arrayOutput(A, i, j);
@@ -114,9 +114,9 @@ Begin
     if (k = 1) then
     begin
       write('Ваш ход, введите номер строки и столбца пустой клетки через пробел: ');
-      userTurn(A, r, o);
       writeln;
-      //userTurn(A, userChoice, r, o);
+      //userTurn(A, r, o);
+      userTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
       dec(k);
     end;
@@ -127,8 +127,8 @@ Begin
     begin
       writeln('Ход компьютера');
       writeln;
-      computerTurn(A, r, o);
-      //computerTurn(A, userChoice, r, o);
+      //computerTurn(A, r, o);
+      computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
       inc(k);
     end;
