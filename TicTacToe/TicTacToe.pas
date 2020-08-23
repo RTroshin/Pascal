@@ -8,7 +8,6 @@ const N = 3; { Константа для размерности массива }
 
 type arrayOfChar = array [1..N, 1..N] of char;
 
-//procedure userTurn(var A: arrayOfChar; r, o: byte);
 procedure userTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
 begin
   readln(r, o);
@@ -27,7 +26,6 @@ begin
   A[r, o] := 'X';
 end;
 
-//procedure computerTurn(var A: arrayOfChar; r, o: byte);
 procedure computerTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
 begin
   repeat
