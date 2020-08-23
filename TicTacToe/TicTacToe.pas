@@ -90,14 +90,12 @@ Begin
   //if (userChoice = 'X') then
   begin
     write('Первый ход ваш, введите номер строки и столбца через пробел: ');
-    //userTurn(A, r, o);
     userTurn(A, userChoice, r, o);
     writeln;
   end
   else
   begin
     writeln('Первый ход компьютера');
-    //computerTurn(A, r, o);
     computerTurn(A, userChoice, r, o);
     writeln
   end;
