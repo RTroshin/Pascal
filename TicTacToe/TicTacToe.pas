@@ -54,7 +54,7 @@ begin
 end;
 
 var A: arrayOfChar;
-    i, j, k, r, o, s: byte; // Вместо k поставить uC
+    i, j, k, r, o, step: byte; // Вместо k поставить uC
     userChoice: char;
 Begin
   writeln('Правила игры "Крестики-нолики":');
@@ -101,9 +101,9 @@ Begin
 
   { Проверка завершенности игры }
 
-  s := 1;
+  step := 1;
   repeat
-    writeln('ХОД', ' ', s + 1);
+    writeln('ХОД', ' ', step + 1);
 
     { Ход пользователя }
 
@@ -126,8 +126,8 @@ Begin
       arrayOutput(A, i, j);
       inc(k);
     end;
-    inc(s);
-  until (s > 3);
+    inc(step);
+  until (step > 3);
   writeln('Игра окончена');
   readln;
 end.
