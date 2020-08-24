@@ -87,7 +87,7 @@ Begin
   if (k = 0) then
   //if (userChoice = 'X') then
   begin
-    write('Первый ход ваш, введите номер строки и столбца через пробел: ');
+    write('Первый ход ваш. Введите номер строки и столбца через пробел: '); { Перенести часть предложения на следующую строку }
     userTurn(A, userChoice, r, o);
     writeln;
   end
@@ -109,7 +109,7 @@ Begin
 
     if (k = 1) then
     begin
-      write('Ваш ход, введите номер строки и столбца пустой клетки через пробел: ');
+      write('Ваш ход. Введите номер строки и столбца пустой клетки через пробел: ');
       writeln;
       userTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
@@ -128,6 +128,6 @@ Begin
     end;
     inc(step);
   until (step > 3);
-  writeln('Игра окончена');
+  writeln('Игра окончена!');
   readln;
 end.
