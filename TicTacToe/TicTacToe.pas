@@ -110,8 +110,8 @@ Begin
     if (k = 1) then
     begin
       write('Ваш ход. Введите номер строки и столбца пустой клетки через пробел: ');
-      writeln;
       userTurn(A, userChoice, r, o);
+      writeln;
       arrayOutput(A, i, j);
       dec(k);
     end;
