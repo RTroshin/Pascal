@@ -80,14 +80,15 @@ Begin
     for j := 1 to N do
       A[i, j] := '#';
   arrayOutput(A, i, j);
-  k := random(0, 1); // DELETE
+  k := random(0, 1); // Удалить
 
   { Первый ход }
 
   if (k = 0) then
   //if (userChoice = 'X') then
   begin
-    write('Первый ход ваш. Введите номер строки и столбца через пробел: '); { Перенести часть предложения на следующую строку }
+    writeln('Первый ход ваш');
+    write('Введите номер строки и столбца через пробел: ');
     userTurn(A, userChoice, r, o);
     writeln;
   end
