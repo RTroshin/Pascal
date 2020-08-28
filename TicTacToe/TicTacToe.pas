@@ -57,7 +57,7 @@ begin
 end;
 
 var A: arrayOfChar;
-    i, j, k, r, o, step: byte; // Вместо k поставить uC
+    i, j, k, uC, r, o, step: byte;
     userChoice: char;
 Begin
   writeln('Правила игры "Крестики-нолики":');
@@ -74,8 +74,10 @@ Begin
   //until ;
   //if (userChoice = 'X') then
     //k := 0
+    //uC := 0
   //else
     //k := 1;
+    //uC := 1;
   
   { Заполнение игрового поля }
   
@@ -84,10 +86,12 @@ Begin
       A[i, j] := '#';
   arrayOutput(A, i, j);
   k := random(0, 1); // Удалить
+  //uC := random(0, 1); // Удалить
 
   { Первый ход }
 
   if (k = 0) then
+  //if (uC = 0) then
   //if (userChoice = 'X') then
   begin
     writeln('Первый ход ваш');
@@ -112,6 +116,7 @@ Begin
     { Ход пользователя }
 
     if (k = 1) then
+  //if (uC = 1) then
     begin
       writeln('Ваш ход');
       write('Введите номер строки и столбца пустой клетки через пробел: ');
@@ -119,17 +124,20 @@ Begin
       writeln;
       arrayOutput(A, i, j);
       dec(k);
+      //dec(uC);
     end;
 
     { Ход компьютера, генерация клетки }
 
-    if (k = 0) then 
+    if (k = 0) then
+  //if (uC = 0) then
     begin
       writeln('Ход компьютера');
       writeln;
       computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
       inc(k);
+      //inc(uC);
     end;
     inc(step);
   until (step > 3);
