@@ -22,7 +22,7 @@ begin
     readln(r, o);
   end;
   //if (userChoice = 'X') then
-  ////if (k = 0) then
+  ////if (uC = 0) then
     //A[r, o] := 'X'
   //else
     //A[r, o] := 'O';
@@ -36,7 +36,7 @@ begin
     o := random(1, N);
   until (A[r, o] = '#');
   //if (userChoice = 'X') then
-  ////if (k = 0) then
+  ////if (uC = 0) then
     //A[r, o] := 'O'
   //else
     //A[r, o] := 'X';
@@ -83,13 +83,13 @@ Begin
     for j := 1 to N do
       A[i, j] := '#';
   arrayOutput(A, i, j);
-  k := random(0, 1); // Удалить
-  //uC := random(0, 1); // Удалить
+  //k := random(0, 1); // Удалить
+  uC := random(0, 1); // Удалить
 
   { Первый ход }
 
-  if (k = 0) then
-  //if (uC = 0) then
+  //if (k = 0) then
+  if (uC = 0) then
   //if (userChoice = 'X') then
   begin
     writeln('Первый ход ваш');
@@ -113,29 +113,29 @@ Begin
 
     { Ход пользователя }
 
-    if (k = 1) then
-  //if (uC = 1) then
+    //if (k = 1) then
+    if (uC = 1) then
     begin
       writeln('Ваш ход');
       write('Введите номер строки и столбца пустой клетки через пробел: ');
       userTurn(A, userChoice, r, o);
       writeln;
       arrayOutput(A, i, j);
-      dec(k);
-      //dec(uC);
+      //dec(k);
+      dec(uC);
     end;
 
     { Ход компьютера, генерация клетки }
 
-    if (k = 0) then
-  //if (uC = 0) then
+    //if (k = 0) then
+    if (uC = 0) then
     begin
       writeln('Ход компьютера');
       writeln;
       computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
-      inc(k);
-      //inc(uC);
+      //inc(k);
+      inc(uC);
     end;
     inc(step);
   until (step > 3);
