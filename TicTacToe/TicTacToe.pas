@@ -83,12 +83,10 @@ Begin
     for j := 1 to N do
       A[i, j] := '#';
   arrayOutput(A, i, j);
-  //k := random(0, 1); // Удалить
   uC := random(0, 1); // Удалить
 
   { Первый ход }
 
-  //if (k = 0) then
   if (uC = 0) then
   //if (userChoice = 'X') then
   begin
@@ -107,13 +105,12 @@ Begin
 
   { Проверка завершенности игры }
 
-  step := 1;
+  step := 1; // Неправильно считает ходы, исправить
   repeat
     writeln('ХОД', ' ', step + 1);
 
     { Ход пользователя }
 
-    //if (k = 1) then
     if (uC = 1) then
     begin
       writeln('Ваш ход');
