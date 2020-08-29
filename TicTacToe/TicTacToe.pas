@@ -73,10 +73,8 @@ Begin
     //readln(userChoice);
   //until ;
   //if (userChoice = 'X') then
-    //k := 0
     //uC := 0
   //else
-    //k := 1;
     //uC := 1;
   
   { Заполнение игрового поля }
