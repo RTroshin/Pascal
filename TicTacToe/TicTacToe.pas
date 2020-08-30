@@ -124,14 +124,12 @@ Begin
 
     { Ход компьютера, генерация клетки }
 
-    //if (k = 0) then
     if (uC = 0) then
     begin
       writeln('Ход компьютера');
       writeln;
       computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
-      //inc(k);
       inc(uC);
     end;
     inc(step);
