@@ -107,7 +107,10 @@ Begin
 
   step := 1; // Неправильно считает ходы, исправить
   repeat
-    writeln('ХОД', ' ', step + 1);
+    if (uC = 0) and (step = 1) then
+      step := 0
+    else
+      writeln('ХОД', ' ', step + 1);
 
     { Ход пользователя }
 
@@ -118,7 +121,6 @@ Begin
       userTurn(A, userChoice, r, o);
       writeln;
       arrayOutput(A, i, j);
-      //dec(k);
       dec(uC);
     end;
 
