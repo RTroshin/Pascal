@@ -65,14 +65,14 @@ Begin
   writeln('Первый, выстроивший в ряд 3 своих фигуры по вертикали, горизонтали или диагонали, выигрывает');
   writeln('Первый ход делает игрок, ставящий крестики');
   write('За кого будете играть? Введите X или O: ');
-  //readln(userChoice);  
+  readln(userChoice);  
   writeln;
   //if (userChoice <> 'X') or (userChoice <> 'O') then
   //repeat
     //write('Введите X или O: ');
     //readln(userChoice);
   //until ;
-  //if (userChoice = 'X') then
+  //if (userChoice = 'X') then // Переделать
     //uC := 0
   //else
     //uC := 1;
