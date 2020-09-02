@@ -72,7 +72,7 @@ Begin
     //write('Введите X или O: ');
     //readln(userChoice);
   //until ;
-  if (userChoice = 'X') then // Переделать. Добавить (userChoice <> 'O')
+  if (userChoice = 'X') then // Переделать
     uC := 0
   else
     uC := 1;
@@ -83,7 +83,6 @@ Begin
     for j := 1 to N do
       A[i, j] := '#';
   arrayOutput(A, i, j);
-  //uC := random(0, 1); // Удалить
 
   { Первый ход }
 
