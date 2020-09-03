@@ -67,11 +67,11 @@ Begin
   write('За кого будете играть? Введите X или O: ');
   readln(userChoice);  
   writeln;
-  //if (userChoice <> 'X') or (userChoice <> 'O') then
-  //repeat
+  if (userChoice <> 'X') or (userChoice <> 'O') then
+  repeat
     //write('Введите X или O: ');
-    //readln(userChoice);
-  //until ;
+    readln(userChoice);
+  until (userChoice = 'X') or (userChoice = 'O');
   if (userChoice = 'X') then // Переделать
     uC := 0
   else
