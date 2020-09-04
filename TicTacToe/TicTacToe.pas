@@ -69,7 +69,7 @@ Begin
   writeln;
   if (userChoice <> 'X') or (userChoice <> 'O') then
   repeat
-    //write('Введите X или O: ');
+    write('Введите X или O: ');
     readln(userChoice);
   until (userChoice = 'X') or (userChoice = 'O');
   if (userChoice = 'X') then // Переделать
