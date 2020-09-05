@@ -71,14 +71,15 @@ Begin
   repeat
     write('Введите X или O: ');
     readln(userChoice);
+    writeln;
   until (userChoice = 'X') or (userChoice = 'O');
   if (userChoice = 'X') then // Переделать
     uC := 0
   else
     uC := 1;
-  
+
   { Заполнение игрового поля }
-  
+
   for i := 1 to N do
     for j := 1 to N do
       A[i, j] := '#';
