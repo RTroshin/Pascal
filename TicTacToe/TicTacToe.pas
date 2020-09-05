@@ -11,7 +11,7 @@ const N = 3; { Константа для размерности массива }
 
 type arrayOfChar = array [1..N, 1..N] of char;
 
-procedure userTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
+procedure userTurn(var A: arrayOfChar; userChoice: char; uC, r, o: byte);
 begin
   readln(r, o);
   while (A[r, o] <> '#') do
@@ -29,7 +29,7 @@ begin
   A[r, o] := 'X';
 end;
 
-procedure computerTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
+procedure computerTurn(var A: arrayOfChar; userChoice: char; uC, r, o: byte);
 begin
   repeat
     r := random(1, N);
@@ -67,7 +67,7 @@ Begin
   write('За кого будете играть? Введите X или O: ');
   readln(userChoice);  
   writeln;
-  if (userChoice <> 'X') or (userChoice <> 'O') then
+  if (userChoice <> 'X') and (userChoice <> 'O') then
   repeat
     write('Введите X или O: ');
     readln(userChoice);
@@ -92,13 +92,13 @@ Begin
   begin
     writeln('Первый ход ваш');
     write('Введите номер строки и столбца через пробел: ');
-    userTurn(A, userChoice, r, o);
+    userTurn(A, userChoice, uC, r, o);
     writeln;
   end
   else
   begin
     writeln('Первый ход компьютера');
-    computerTurn(A, userChoice, r, o);
+    computerTurn(A, userChoice, uC, r, o);
     writeln
   end;
   arrayOutput(A, i, j);
@@ -118,7 +118,7 @@ Begin
     begin
       writeln('Ваш ход');
       write('Введите номер строки и столбца пустой клетки через пробел: ');
-      userTurn(A, userChoice, r, o);
+      userTurn(A, userChoice, uC, r, o);
       writeln;
       arrayOutput(A, i, j);
       dec(uC);
@@ -130,7 +130,7 @@ Begin
     begin
       writeln('Ход компьютера');
       writeln;
-      computerTurn(A, userChoice, r, o);
+      computerTurn(A, userChoice, uC, r, o);
       arrayOutput(A, i, j);
       inc(uC);
     end;
