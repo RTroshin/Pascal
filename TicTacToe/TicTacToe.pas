@@ -87,8 +87,8 @@ Begin
 
   { Первый ход }
 
-  //if (uC = 0) then
-  if (userChoice = 'X') then // Исправить очередность хода
+  if (uC = 0) then
+  //if (userChoice = 'X') then // Исправить очередность хода
   begin
     writeln('Первый ход ваш');
     write('Введите номер строки и столбца через пробел: ');
