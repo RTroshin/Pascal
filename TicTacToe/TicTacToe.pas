@@ -26,7 +26,6 @@ begin
     A[r, o] := 'X'
   else
     A[r, o] := 'O';
-  //A[r, o] := 'X';
 end;
 
 procedure computerTurn(var A: arrayOfChar; userChoice: char; uC, r, o: byte);
