@@ -105,10 +105,9 @@ Begin
 
   step := 1; // Неправильно считает ходы, исправить
   repeat
-    //if (uC = 0) and (step = 1) then
-      //step := 0
-    //else
-      writeln('ХОД', ' ', step + 1);
+    //if (uC = 0) and (step = 1) then // Удалить
+
+    writeln('ХОД', ' ', step + 1);
 
     { Ход пользователя }
 
