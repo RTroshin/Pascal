@@ -26,7 +26,7 @@ begin
     A[r, o] := 'X'
   else
     A[r, o] := 'O';
-  A[r, o] := 'X';
+  //A[r, o] := 'X';
 end;
 
 procedure computerTurn(var A: arrayOfChar; userChoice: char; uC, r, o: byte);
@@ -40,7 +40,7 @@ begin
     A[r, o] := 'O'
   else
     A[r, o] := 'X';
-  A[r, o] := 'O';
+  //A[r, o] := 'O';
 end;
 
 { Процедура вывода массива }
@@ -107,32 +107,32 @@ Begin
 
   step := 1; // Неправильно считает ходы, исправить
   repeat
-    if (uC = 0) and (step = 1) then
-      step := 0
-    else
+    //if (uC = 0) and (step = 1) then
+      //step := 0
+    //else
       writeln('ХОД', ' ', step + 1);
 
     { Ход пользователя }
 
-    if (uC = 1) then
+    //if (uC = 1) then
     begin
       writeln('Ваш ход');
       write('Введите номер строки и столбца пустой клетки через пробел: ');
       userTurn(A, userChoice, uC, r, o);
       writeln;
       arrayOutput(A, i, j);
-      dec(uC);
+      //dec(uC);
     end;
 
     { Ход компьютера, генерация клетки }
 
-    if (uC = 0) then
+    //if (uC = 0) then
     begin
       writeln('Ход компьютера');
       writeln;
       computerTurn(A, userChoice, uC, r, o);
       arrayOutput(A, i, j);
-      inc(uC);
+      //inc(uC);
     end;
     inc(step);
   until (step > 3);
