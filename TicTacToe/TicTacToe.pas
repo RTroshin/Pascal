@@ -119,13 +119,11 @@ Begin
 
     { Ход компьютера, генерация клетки }
 
-    //if (uC = 0) then
     begin
       writeln('Ход компьютера');
       writeln;
       computerTurn(A, userChoice, uC, r, o);
       arrayOutput(A, i, j);
-      //inc(uC);
     end;
     inc(step);
   until (step > 3);
