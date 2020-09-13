@@ -22,7 +22,6 @@ begin
     readln(r, o);
   end;
   if (userChoice = 'X') then
-  //if (uC = 0) then
     A[r, o] := 'X'
   else
     A[r, o] := 'O';
@@ -35,7 +34,6 @@ begin
     o := random(1, N);
   until (A[r, o] = '#');
   if (userChoice = 'X') then
-  //if (uC = 0) then
     A[r, o] := 'O'
   else
     A[r, o] := 'X';
