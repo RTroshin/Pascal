@@ -114,7 +114,6 @@ Begin
         writeln('Первый ход ваш')
       else
         writeln('Ваш ход');
-      //writeln('Ваш ход');
       write('Введите номер строки и столбца пустой клетки через пробел: ');
       userTurn(A, userChoice, r, o);
       writeln;
