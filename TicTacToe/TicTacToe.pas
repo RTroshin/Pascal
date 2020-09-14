@@ -128,8 +128,7 @@ Begin
       if (step = 0) then
         writeln('Первый ход компьютера')
       else
-        writeln('Ход компьютера');
-      //writeln('Ход компьютера');      
+        writeln('Ход компьютера');     
       writeln;
       computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
