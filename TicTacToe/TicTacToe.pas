@@ -60,6 +60,7 @@ Begin
   writeln('Игроки по очереди ставят на свободные клетки поля 3x3 знаки (один всегда крестики, другой всегда нолики)');
   writeln('Первый, выстроивший в ряд 3 своих фигуры по вертикали, горизонтали или диагонали, выигрывает');
   writeln('Первый ход делает игрок, ставящий крестики');
+  writeln;
   write('За кого будете играть? Введите X или O: ');
   readln(userChoice);  
   writeln;
@@ -70,9 +71,9 @@ Begin
     writeln;
   until (userChoice = 'X') or (userChoice = 'O');
   if (userChoice = 'X') then // Переделать
-    uC := 0
+    uC := 1
   else
-    uC := 1;
+    uC := 0;
 
   { Заполнение игрового поля }
 
@@ -83,48 +84,60 @@ Begin
 
   { Первый ход }
 
-  if (uC = 0) then
+  //if (uC = 1) then
   //if (userChoice = 'X') then // Исправить очередность хода
-  begin
-    writeln('Первый ход ваш');
-    write('Введите номер строки и столбца через пробел: ');
-    userTurn(A, userChoice, r, o);
-    writeln;
-  end
-  else
-  begin
-    writeln('Первый ход компьютера');
-    computerTurn(A, userChoice, r, o);
-    writeln
-  end;
-  arrayOutput(A, i, j);
+  //begin
+  //  writeln('Первый ход ваш');
+  //  write('Введите номер строки и столбца через пробел: ');
+  //  userTurn(A, userChoice, r, o);
+  //  writeln;
+  //end
+  //else
+  //begin
+  //  writeln('Первый ход компьютера');
+  //  computerTurn(A, userChoice, r, o);
+  //  writeln
+  //end;
+  //arrayOutput(A, i, j);
 
   { Проверка завершенности игры }
 
-  step := 1; // Неправильно считает ходы, исправить
+  step := 0; // Неправильно считает ходы, исправить
   repeat
     writeln('ХОД', ' ', step + 1);
 
     { Ход пользователя }
 
+    if (uc = 1) then
     begin
-      writeln('Ваш ход');
+      if (step = 0) then
+        writeln('Первый ход ваш')
+      else
+        writeln('Ваш ход');
+      //writeln('Ваш ход');
       write('Введите номер строки и столбца пустой клетки через пробел: ');
       userTurn(A, userChoice, r, o);
       writeln;
       arrayOutput(A, i, j);
-    end;
+      dec(uC);
+    end
 
     { Ход компьютера, генерация клетки }
 
+    else
     begin
-      writeln('Ход компьютера');
+      if (step = 0) then
+        writeln('Первый ход компьютера')
+      else
+        writeln('Ход компьютера');
+      //writeln('Ход компьютера');      
       writeln;
       computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
+      inc(uC);
     end;
     inc(step);
-  until (step > 3);
+  until (step > 4);
   writeln('Игра окончена!');
   readln;
 end.
