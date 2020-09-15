@@ -87,12 +87,10 @@ Begin
   //begin
   //  writeln('Первый ход ваш');
   //  write('Введите номер строки и столбца через пробел: ');
-  //  userTurn(A, userChoice, r, o);
   //end
   //else
   //begin
   //  writeln('Первый ход компьютера');
-  //  computerTurn(A, userChoice, r, o);
   //end;
   //arrayOutput(A, i, j);
 
