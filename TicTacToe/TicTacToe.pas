@@ -90,13 +90,11 @@ Begin
   //  writeln('Первый ход ваш');
   //  write('Введите номер строки и столбца через пробел: ');
   //  userTurn(A, userChoice, r, o);
-  //  writeln;
   //end
   //else
   //begin
   //  writeln('Первый ход компьютера');
   //  computerTurn(A, userChoice, r, o);
-  //  writeln
   //end;
   //arrayOutput(A, i, j);
 
@@ -128,7 +126,7 @@ Begin
       if (step = 0) then
         writeln('Первый ход компьютера')
       else
-        writeln('Ход компьютера');     
+        writeln('Ход компьютера');
       writeln;
       computerTurn(A, userChoice, r, o);
       arrayOutput(A, i, j);
