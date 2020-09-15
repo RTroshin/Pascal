@@ -82,8 +82,6 @@ Begin
       A[i, j] := '#';
   arrayOutput(A, i, j);
 
-  { Первый ход }
-
   //if (uC = 1) then
   //if (userChoice = 'X') then // Исправить очередность хода
   //begin
