@@ -82,8 +82,7 @@ Begin
       A[i, j] := '#';
   arrayOutput(A, i, j);
 
-  //if (uC = 1) then
-  //if (userChoice = 'X') then // Исправить очередность хода
+  //if (userChoice = 'X') then
   //begin
   //  writeln('Первый ход ваш');
   //  write('Введите номер строки и столбца через пробел: ');
