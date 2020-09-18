@@ -83,10 +83,7 @@ Begin
   arrayOutput(A, i, j);
 
   //if (userChoice = 'X') then
-  //begin
   //  writeln('Первый ход ваш');
-  //  write('Введите номер строки и столбца через пробел: ');
-  //end
 
   { Проверка завершенности игры }
 
