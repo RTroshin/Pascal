@@ -14,6 +14,13 @@ type arrayOfChar = array [1..N, 1..N] of char;
 procedure userTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
 begin
   readln(r, o);
+  if ((r > 3) or (o > 3)) then
+  begin
+    //writeln;
+    //writeln('Введите два числа в диапазоне от 1 до 3!');
+    //writeln('Пример: "1 3" или "3 1"');
+    readln(r, o);
+  end;
   while (A[r, o] <> '#') do
   begin
     writeln;
