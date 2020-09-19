@@ -16,9 +16,9 @@ begin
   readln(r, o);
   if ((r > 3) or (o > 3)) then
   begin
-    //writeln;
-    //writeln('Введите два числа в диапазоне от 1 до 3!');
-    //writeln('Пример: "1 3" или "3 1"');
+    writeln;
+    writeln('Введите два числа в диапазоне от 1 до 3!');
+    writeln('Пример: "1 3" или "3 1"');
     readln(r, o);
   end;
   while (A[r, o] <> '#') do
