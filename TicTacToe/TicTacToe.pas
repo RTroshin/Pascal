@@ -14,8 +14,8 @@ type arrayOfChar = array [1..N, 1..N] of char;
 procedure userTurn(var A: arrayOfChar; userChoice: char; r, o: byte);
 begin
   readln(r, o);
-  if ((r > 3) or (o > 3)) then
-  while ((r > 3) or (o > 3)) do
+  if (r > 3) or (o > 3) then
+  while (r > 3) or (o > 3) do
   begin
     writeln;
     writeln('Числа должны быть в диапазоне от 1 до 3!');
