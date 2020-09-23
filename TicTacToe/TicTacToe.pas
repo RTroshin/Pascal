@@ -17,10 +17,6 @@ begin
   //if (r > 3) or (o > 3) then
   //while (r > 3) or (o > 3) do
   //begin
-  //  writeln;
-  //  writeln('Числа должны быть в диапазоне от 1 до 3!');
-  //  writeln('Пример: "1 3" или "3 1"');
-  //  write('Введите номер строки и столбца через пробел: ');
   //  readln(r, o);
   //end;
   if (r < 1) or (r > 3) then
