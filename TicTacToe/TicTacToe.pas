@@ -81,7 +81,7 @@ begin
 end;
 
 var A: arrayOfChar;
-    i, j, k, uC, r, o, step: byte;
+    i, j, k, uC, r, o, step, count: byte;
     userChoice: char;
     win: boolean;
 Begin
@@ -150,13 +150,15 @@ Begin
   
   // Проверяем элементы на главной диагонали
 
+  count := 0;
   for i := 1 to N do
-    if (A[i, i] = 'X') then
-    begin
-      writeln('Игра окончена!'); // Не забыть указать победителя
-      win := true;
-    end;
-
+    if (A[i, i] = 'X') then // Не забыть про 'O'
+      inc(count);
+  if (count = 3) then
+  begin
+    writeln('Игра окончена!'); // Не забыть указать победителя
+    win := true;  
+  end;
   //until (step > 4);
   until win = true;
   readln;
