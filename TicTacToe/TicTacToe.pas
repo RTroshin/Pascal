@@ -83,6 +83,7 @@ end;
 var A: arrayOfChar;
     i, j, k, uC, r, o, step: byte;
     userChoice: char;
+    win: boolean;
 Begin
   writeln('Правила игры "Крестики-нолики":');
   writeln('Игроки по очереди ставят на свободные клетки поля 3x3 знаки (один всегда крестики, другой всегда нолики)');
@@ -113,6 +114,7 @@ Begin
   { Проверка завершенности игры }
 
   step := 0; // Неправильно считает ходы, исправить
+  win := false;
   repeat
     writeln('ХОД', ' ', step + 1);
 
@@ -145,7 +147,17 @@ Begin
       inc(uC);
     end;
     inc(step);
-  until (step > 4);
-  writeln('Игра окончена!');
+  
+  // Проверяем элементы на главной диагонали
+
+  for i := 1 to N do
+    if (A[i, i] = 'X') then
+    begin
+      writeln('Игра окончена!'); // Не забыть указать победителя
+      win := true;
+    end;
+
+  //until (step > 4);
+  until win = true;
   readln;
 end.
