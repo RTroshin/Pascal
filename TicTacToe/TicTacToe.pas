@@ -172,6 +172,19 @@ Begin
       win := true;  
     end;
 
+  // Проверяем элементы на побочной диагонали
+
+    count := 0;
+    for i := 1 to N do
+      if (A[i, N + 1 - i] = 'X') then
+        inc(count);
+    if (count = 3) then
+    begin
+      writeln('Игра окончена!');
+      writeln('Победитель - X');
+      win := true;  
+    end;
+
   until win = true;
   readln;
 end.
