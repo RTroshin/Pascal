@@ -159,7 +159,6 @@ Begin
     writeln('Игра окончена!'); // Не забыть указать победителя
     win := true;  
   end;
-  //until (step > 4);
   until win = true;
   readln;
 end.
