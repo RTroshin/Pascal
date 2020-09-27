@@ -150,15 +150,28 @@ Begin
   
   // Проверяем элементы на главной диагонали
 
-  count := 0;
-  for i := 1 to N do
-    if (A[i, i] = 'X') then // Не забыть про 'O'
-      inc(count);
-  if (count = 3) then
-  begin
-    writeln('Игра окончена!'); // Не забыть указать победителя
-    win := true;  
-  end;
+    count := 0;
+    for i := 1 to N do
+      if (A[i, i] = 'X') then
+        inc(count);
+    if (count = 3) then
+    begin
+      writeln('Игра окончена!');
+      writeln('Победитель - X');
+      win := true;  
+    end;
+
+    count := 0;
+    for i := 1 to N do
+      if (A[i, i] = 'O') then
+        inc(count);
+    if (count = 3) then
+    begin
+      writeln('Игра окончена!');
+      writeln('Победитель - O');
+      win := true;  
+    end;
+
   until win = true;
   readln;
 end.
