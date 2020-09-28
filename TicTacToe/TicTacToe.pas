@@ -185,6 +185,17 @@ Begin
       win := true;  
     end;
 
+    count := 0;
+    for i := 1 to N do
+      if (A[i, N + 1 - i] = 'O') then
+        inc(count);
+    if (count = 3) then
+    begin
+      writeln('Игра окончена!');
+      writeln('Победитель - O');
+      win := true;  
+    end;
+
   until win = true;
   readln;
 end.
