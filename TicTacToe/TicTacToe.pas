@@ -196,6 +196,24 @@ Begin
       win := true;  
     end;
 
+  // Проверяем элементы в строках
+
+    count := 0;
+    for i := 1 to N do
+    begin
+      for j := 1 to N do
+        if (A[i, j] = 'X') then
+          inc(count);
+      if count < 3 then
+        count := 0;
+    end;
+    if (count = 3) then
+    begin
+      writeln('Игра окончена!');
+      writeln('Победитель - X');
+      win := true;  
+    end;
+
   until win = true;
   readln;
 end.
