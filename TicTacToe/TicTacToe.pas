@@ -113,7 +113,7 @@ Begin
 
   { Проверка завершенности игры }
 
-  step := 0; // Неправильно считает ходы, исправить
+  step := 0;
   win := false;
   repeat
     writeln('ХОД', ' ', step + 1);
@@ -229,7 +229,6 @@ Begin
       writeln('Победитель - O');
       win := true;  
     end;
-
   until win = true;
   readln;
 end.
